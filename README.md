@@ -1,17 +1,41 @@
 # Agent Space
 
-Modern AI agent platform landing page for teams.
+A production-oriented starter for an AI agent operating platform.
 
-## Run locally
+## Stack
 
-Open `index.html` in your browser.
+- Backend: FastAPI + SQLAlchemy + SQLite
+- Frontend: React + Vite
+- Auth: JWT
+- AI: OpenAI-ready service
 
-## Files
+## Quick start
 
-- `index.html` — site structure
-- `styles.css` — styling
-- `script.js` — mobile menu behavior
+### Backend
 
-## Repository
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
 
-This project is ready to be published via GitHub Pages or a static hosting service.
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Access
+
+- Frontend: http://localhost:3000
+- API: http://localhost:8000
+
+## Notes
+
+- This starter includes users, agents, tasks, workflows, and dashboard scaffolding.
+- Add your OpenAI key in `backend/.env` to enable LLM execution.
